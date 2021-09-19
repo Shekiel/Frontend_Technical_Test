@@ -25,6 +25,13 @@ module.exports = function (environment) {
 
   ENV.firebase = {
     // add firebase config here
+    apiKey: 'AIzaSyBC-O35eSEjl5EfKX9DCXvHIwm3wOE2px4',
+    authDomain: 'clarus-79410.firebaseapp.com',
+    projectId: 'clarus-79410',
+    storageBucket: 'clarus-79410.appspot.com',
+    messagingSenderId: '306287492207',
+    appId: '1:306287492207:web:aef739abf1a162ea32219a',
+    measurementId: 'G-Z7PBXFK8WE',
   };
 
   if (environment === 'test') {
