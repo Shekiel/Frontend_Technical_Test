@@ -56,4 +56,60 @@
       background-color: darken(#e91c50, 10%);
     }
   }
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    border: none;
+    float: left;
+    margin: 0px;
+  }
+
+  .rating > input {
+    display: none;
+  }
+
+  .rating > label:before {
+    content: '';
+    background: yellow;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    align-self: center;
+  }
+  .rating > label {
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin: 5px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 50%;
+  }
+
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    background-color: #e91c50 !important;
+    cursor: pointer;
+  }
+
+  .rating > input:checked + label:hover,
+  .rating > label:hover ~ input:checked ~ label,
+  .rating > input:checked ~ label:hover ~ label {
+    background: #e91c50 !important;
+    cursor: pointer;
+  }
 }

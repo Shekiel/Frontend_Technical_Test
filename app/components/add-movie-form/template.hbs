@@ -21,6 +21,32 @@
     />
   </label>
 
+  <label>
+    Rating
+    <fieldset class='rating'>
+      <input type='radio' id='field_star5' name='rating' value='5' />
+      <label class='full' for='field_star5'></label>
+      <input type='radio' id='field_star4' name='rating' value='4' />
+      <label class='full' for='field_star4'></label>
+      <input type='radio' id='field_star3' name='rating' value='3' />
+      <label class='full' for='field_star3'></label>
+      <input type='radio' id='field_star2' name='rating' value='2' />
+      <label class='full' for='field_star2'></label>
+      <input type='radio' id='field_star1' name='rating' value='1' />
+      <label class='full' for='field_star1'></label>
+    </fieldset>
+    <Input
+      @type='number'
+      @max='5'
+      @min='1'
+      @value={{this.rating}}
+      class='form-rating'
+      placeholder='Enter Rating Here..'
+      required={{true}}
+    />
+
+  </label>
+
   {{#if this.errorMessage}}
     <div class='error-message'>
       {{this.errorMessage}}
