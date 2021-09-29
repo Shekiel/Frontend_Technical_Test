@@ -1,4 +1,4 @@
-<li class={{this.styleNamespace}}>
+<li class={{this.styleNamespace}} {{on 'submit' this.deleteMovie}}>
   <div class='details'>
     <h2>
       {{this.movie.title}}
@@ -10,6 +10,7 @@
     </p>
 
     <h5>Rating: {{this.movie.rating}}</h5>
+    <button type='submit' class='btn btn-danger'>Delete</button>
 
   </div>
 </li>
