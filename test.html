@@ -7,3 +7,15 @@
   <div id="qunit-fixture"></div>
   <script src="https://code.jquery.com/qunit/qunit-2.17.2.js"></script>
 </body>
+
+<script>
+  function add(a, b) {
+    return a + b;
+  }
+
+  QUnit.module('add', function () {
+    QUnit.test('two numbers', function (assert) {
+      assert.equal(add(1, 2), 3);
+    });
+  });
+</script>
